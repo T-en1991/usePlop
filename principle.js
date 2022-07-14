@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-
+//脚手架plop原理
 const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
@@ -9,6 +9,10 @@ const ejs = require('ejs');
 const tmplDir = path.join(__dirname, 'generator');
 // 命令行所在目录
 const destDir = process.cwd();
+
+module.exports = plop => {
+  plop.setGenerator('component', {});
+}
 
 //用户交互
 inquirer.prompt([
